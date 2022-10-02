@@ -7,8 +7,8 @@ class Definition
   @@definition = {}
   @@total_row = 0
 
-  def initialize(definition, word_id, id)
-    @definition = definition
+  def initialize(name, word_id, id)
+    @name = name
     @word_id = word_id
     @id = id || @@total_row += 1
   end

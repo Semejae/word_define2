@@ -26,7 +26,7 @@ describe('update a word path', {:type => :feature}) do
     visit("/word")
     click_on("Giant")
     click_on("Edit word")
-    fill_in("name", :with => "small")
+    fill_in("name", :with => "Small")
     click_on("Update")
     expect(page).to have_content("Small")
   end
