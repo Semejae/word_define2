@@ -25,7 +25,7 @@ describe('.all') do
     definition = Definition.new("Grant", @word.id, nil)
     definition.save()
     definition2 = Definition.new("Small", @word.id, nil)
-    definition.save()
+    definition2.save()
     expect(Definition.all()).to(eq([definition,definition2]))
   end
 end
@@ -63,7 +63,7 @@ describe('#update') do
   it('updates an definition by id') do
     definition = Definition.new("Big", @word.id, nil)
     definition.save()
-    definition.update("Small", @word.id, nil)
+    definition.update("Small", @word.id)
     expect(definition.name).to(eq("Small"))
   end
 end
