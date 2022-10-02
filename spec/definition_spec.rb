@@ -5,12 +5,12 @@ require('word')
 
 describe '#definition' do
 
-  # before(:each) do
-  #   Word.clear()
-  #   Definition.clear()
-  #   @word =Word.new("Grant",nil)
-  #   @word.save()
-  # end
+  before(:each) do
+    Word.clear()
+    Definition.clear()
+    @word =Word.new("Grant",nil)
+    @word.save()
+  end
 
   describe('#==') do 
   it('if definition matches another definition') do
