@@ -18,7 +18,10 @@ class Word
   def self.all()
     @@words.values
   end
-  
+
+  def ==(other_words)
+    self.name() == other_words.name()
+  end
 
 
 end

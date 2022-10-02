@@ -33,6 +33,14 @@ describe('.all') do
   end
 end
 
+describe('#==') do 
+  it('if word matches another word') do
+    words = Word.new('dog', nil)
+    words2 = Word.new('dog', nil)
+    expect(words).to(eq(words2))
+  end
+end
+
 
 
 
