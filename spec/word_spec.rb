@@ -10,16 +10,14 @@ describe '#word' do
 
 describe('#inittialize') do
     it('it will recongnize name and id') do 
-      words = Word.new
-      ("Grant") 
+      words = Word.new("Grant") 
     expect(words.name).to(eq("Grant"))
   end 
 end
 
 describe('#save') do
   it('saves a word') do
-    words = Word.new
-    ("Grant" )
+    words = Word.new("Grant" )
       words.save()
       words2 = Word.new("Bill" ) 
       words2.save()
@@ -43,11 +41,9 @@ end
 
 describe('.clear') do 
   it('clear all words') do 
-    words = Word.new
-    ("Grant" )
+    words = Word.new("Grant" )
     words.save()
-    words2 = Word.new
-    ("Bill" )
+    words2 = Word.new("Bill" )
     words2.save()
     Word.clear()
     expect(Word.all).to(eq([]))
@@ -56,13 +52,20 @@ end
 
 describe('.find') do
   it('finds a word by id') do
-    words = Word.new
-    ("Grant", nil)
+    words = Word.new("Grant", nil)
     words.save()
-    words2 = Word.new
-    ("Bill",nil)
+    words2 = Word.new("Bill",nil)
     words2.save()
     expect(Word.find(words.id)).to(eq(words))
+  end
+end
+
+describe('#update') do
+  it('updates a word by id') do 
+    words = Word.new("Grant",nil)
+    words.save()
+    words.update("Bobby")
+    expect(words.name).to(eq("Bobby"))
   end
 end
 
