@@ -29,3 +29,16 @@ describe('.all') do
     expect(Definition.all()).to(eq([definition,definition2]))
   end
 end
+
+describe('.clear') do 
+  it('clear all definition') do 
+    definition = Definition.new("Giant steps", @word.id, nil)
+    definition.save()
+    definition2 = Definition.new("Billy", @word.id, nil)
+    definition.save()
+    Definition.clear()
+    expect(Definition.all).to(eq([]))
+  end
+end
+
+d

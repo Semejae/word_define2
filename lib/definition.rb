@@ -14,3 +14,7 @@ class Definition
   def self.all
     @@definition.values
   end
+
+  def self.clear
+    @@definition = {}
+  end
