@@ -15,5 +15,10 @@ class Word
     @@words[self.id] = Word.new(self.name, self.id)
   end
 
+  def self.all()
+    @@words.values
+  end
+  
+
 
 end

@@ -27,6 +27,12 @@ describe('#save') do
   end
 end
 
+describe('.all') do 
+  it('return empty array') do
+    expect(Word.all()).to(eq([]))
+  end
+end
+
 
 
 
