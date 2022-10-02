@@ -58,3 +58,12 @@ describe('.find') do
     expect(Definition.find(definition.id)).to(eq(definition))
   end
 end
+
+describe('#update') do
+  it("updates an definition by id") do
+    definition = Definition.new("Big", @word.id, nil)
+    definition.save()
+    definition.update("Small", @word.id, nil)
+    expect(definition.name).to(eq("Small"))
+  end
+end
