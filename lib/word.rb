@@ -23,5 +23,11 @@ class Word
     self.name() == other_words.name()
   end
 
+  def self.clear
+    @@words = {}
+    @@total_row = 0
+  end
+  
+
 
 end
