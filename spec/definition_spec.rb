@@ -49,4 +49,12 @@ describe('#save') do
   end
 end
 
-
+describe('.find') do
+  it('finds a definition by id') do
+    definition = Definition.new("Grant", @word.id, nil)
+    definition.save()
+    definition2 = Definition.new("Small", @word.id, nil)
+    definition.save()
+    expect(Definition.find(definition.id)).to(eq(definition))
+  end
+end
