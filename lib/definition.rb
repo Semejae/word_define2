@@ -18,3 +18,8 @@ class Definition
   def self.clear
     @@definition = {}
   end
+
+  def save
+    @@definition[self.id] = Definition.new(self.name, self.word_id, self.id)
+  end
+  

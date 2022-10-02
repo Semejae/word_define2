@@ -41,4 +41,12 @@ describe('.clear') do
   end
 end
 
-d
+describe('#save') do 
+  it('saves a definition') do  
+    definition = Definition.new("Big", @word.id, nil)
+    definition.save()
+    expect(Definition.all).to(eq([definition]))
+  end
+end
+
+
