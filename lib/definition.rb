@@ -7,6 +7,12 @@ class Definition
   @@definition = {}
   @@total_row = 0
 
+  def initialize(definition, word_id, id)
+    @definition = definition
+    @word_id = word_id
+    @id = id || @@total_row += 1
+  end
+
   def ==(definition_to_compare)
     (self.name() == definition_to_compare.name()) && (self.word_id() == definition_to_compare.word_id())
   end

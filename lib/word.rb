@@ -6,7 +6,7 @@ class Word
   @@words = {}
   @@total_row = 0
 
-  def inittialize(name, id)
+  def initialize(name, id)
     @name = name
     @id = id || @@total_row += 1
   end
