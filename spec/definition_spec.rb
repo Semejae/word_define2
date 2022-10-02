@@ -19,3 +19,9 @@ describe '#definition' do
     expect(definition).to(eq(definition2))
   end
 end
+
+describe('.all') do 
+  it('return a list of all definitions') do
+    expect(Word.all()).to(eq([]))
+  end
+end
