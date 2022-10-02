@@ -22,6 +22,10 @@ end
 
 describe('.all') do 
   it('return a list of all definitions') do
-    expect(Word.all()).to(eq([]))
+    definition = Definition.new("Grant", @word.id, nil)
+    definition.save()
+    definition2 = Definition.new("Small", @word.id, nil)
+    definition.save()
+    expect(Definition.all()).to(eq([definition,definition2]))
   end
 end
