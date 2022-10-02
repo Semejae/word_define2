@@ -60,10 +60,21 @@ describe('.find') do
 end
 
 describe('#update') do
-  it("updates an definition by id") do
+  it('updates an definition by id') do
     definition = Definition.new("Big", @word.id, nil)
     definition.save()
     definition.update("Small", @word.id, nil)
     expect(definition.name).to(eq("Small"))
+  end
+end
+
+describe('#delete') do
+  it('deletes an definition by id') do
+    definition = Definition.new("Giant", @word.id, nil)
+    definition.save()
+    definition2 = Definition.new("Small", @word.id, nil)
+    definition2.save()
+    definition.delete()
+    expect(Definition.all).to(eq([definition2]))
   end
 end

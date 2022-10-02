@@ -32,3 +32,7 @@ class Definition
     self.word_id = word_id
     @@definition[self.id] = Definition.new(self.name, self.word_id, self.id)
   end
+
+  def delete
+    @@definition.delete(self.id)
+  end
