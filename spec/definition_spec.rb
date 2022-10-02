@@ -78,3 +78,18 @@ describe('#delete') do
     expect(Definition.all).to(eq([definition2]))
   end
 end
+
+describe('.find_by_word') do 
+  it('finds definition for a word') do
+    words2 = Word.new("Grant", nil)
+    words2.save()
+    definition = Definition.new("Big", @word.id, nil)
+    definition.save()
+    definition2 = Definition.new("Small", words2.id , nil)
+    definition2.save()
+    expect(Definition.find_by_word(words2.id)).to(eq([definition2]))
+  end
+end
+
+end
+

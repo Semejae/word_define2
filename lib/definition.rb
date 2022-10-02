@@ -36,3 +36,14 @@ class Definition
   def delete
     @@definition.delete(self.id)
   end
+
+  def self.find_by_word(word_id)
+    definition = []
+    @@definition.values.each do |definition| 
+      if definition.word_id == word_id
+        definition.push(definition)
+      end
+    end
+    definition
+  end
+  
