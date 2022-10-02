@@ -44,13 +44,13 @@ class Definition
   end
 
   def self.find_by_word(word_id)
-    definition = []
+    definition_array = []
     @@definition.values.each do |definition| 
       if definition.word_id == word_id
-        definition.push(definition)
+        definition_array.push(definition)
       end
     end
-    definition
+    definition_array
   end
   
   def word
